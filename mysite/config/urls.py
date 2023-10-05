@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('pybo/', include('pybo.urls')),
     path('encore/', include('encore.urls')),
+    path('', include('main.urls'))
 ]

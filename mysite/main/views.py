@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return  HttpResponse("안녕하세요! pybo에 오신것을 환영합니다.")
+    return HttpResponse("여기는 장고 메인입니다.")
