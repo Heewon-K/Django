@@ -30,7 +30,9 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ # if getting unapplied migration(s) : run 'python manage.py migrate' to create tables
+    'pybo.apps.PyboConfig',  # pybo/models.py에서 만든 모델을 이용하여 테이블 만들기. 모델을 이용하기 위해서는 모델이 종속되어있는 앱을 장고에 등록해야한다.
+    'encore.apps.EncoreConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,7 +78,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3', # SQLite는 파일 기반의 아주 작은 데이터 베이스. 초기 개발 단계에서 사용 후 서비스 제공할 때 운영환경에 맞는 DB로 바꾼다.
     }
 }
 

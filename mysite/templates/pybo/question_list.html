@@ -1,0 +1,10 @@
+{% if question_list %} <!-- template tag -->
+    <ul>
+    {% for question in question_list %}
+        <li><a href="{% url 'pybo:detail' question.id%}">{{ question.subject }}</a></li>
+        <!--pybo:detail, pybo(namespace)의 detail(별칭)-->
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>질문이 없습니다.</p>
+{% endif %}
