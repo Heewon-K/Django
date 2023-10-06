@@ -21,3 +21,8 @@
 
 front-end : html, js, css
     - 사용자 눈에 보이고 만져서 조작하는 부분
+
+** MTV **
+M : Model!
+T : Template!
+V : View!
