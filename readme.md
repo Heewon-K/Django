@@ -12,3 +12,13 @@ Day 1. setting env for Django! (23.10.05)
   - modify config/urls.py, pybo/views.py, pybo/urls.py to manage url mapping and view
 
 Day 2. Database, Tables and how to work with them in Django (23.10.06)
+  - python manage.py migrate
+  - download and set SQLite
+  - create models on pybo/models.py : Question(subject, content, create_date) & Answer(question, content, create_date)
+    - subject/question : CharField(max_length : 200), content : TextField, create_date : DateTimeField
+  - add pybo app on config/settings.py - INSTALLED_APPS
+  - create DB table(question&answer) by makemigrations --> migrate
+  - use django shell to save, get, modify and delete data in question & answer tables
+  - Django admin : make superuser account, modify admin.py to give permission to modify Question model
+  - modify pybo/views.py and create templates to show list of questions and answers on 'localhost.../pybo/'
+  - use namespaces to use url without confusion!
