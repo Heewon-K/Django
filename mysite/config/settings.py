@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [ # if getting unapplied migration(s) : run 'python manage.py migrate' to create tables
     'pybo.apps.PyboConfig',  # pybo/models.py에서 만든 모델을 이용하여 테이블 만들기. 모델을 이용하기 위해서는 모델이 종속되어있는 앱을 장고에 등록해야한다.
+    'common.apps.CommonConfig',
     'encore.apps.EncoreConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,3 +127,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 로그인 성공 시 자동으로 이동할 URL
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
