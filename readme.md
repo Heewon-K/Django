@@ -22,3 +22,24 @@ Day 2. Database, Tables and how to work with them in Django (23.10.06)
   - Django admin : make superuser account, modify admin.py to give permission to modify Question model
   - modify pybo/views.py and create templates to show list of questions and answers on 'localhost.../pybo/'
   - use namespaces to use url without confusion!
+
+Day 3. (23.10.10)
+
+Day 4. (23.10.11) - missed the class
+
+Day 5. (23.10.12) - catching up missed class! + today's class
+
+Day 6. AWS! setting up AWS lightsail :3
+  - upload the django project files to github. (I was already uploading the files to github so I only updated .gitignore)
+  - it is hard to manage a server so let's use AWS lightsail!
+  - made an account for lightsail and created an instance(Linux/Unix, Ubuntu 20.04 LTS)
+  - create static IP
+  - add a new rule on firewall : port 8000
+  - set the date to KST
+  - download MobaXterm -> use SSH key and static IP to connect to the server
+
+Day 7. Continue setting the server
+  - install: pyrhon3-venv
+  - mkdir : projects/venvs
+  - make venv named mysite in projects/venvs
+  - 
